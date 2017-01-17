@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Aguilas Guadalupanas</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/flexslider/flexslider.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/aguilasGuadalupanas.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+		
+		<script>
+			$(function () {
+				$(document).ready(function () {
+					// Build the chart
+					Highcharts.chart('piechart', {
+						chart: {
+							plotBackgroundColor: null,
+							plotBorderWidth: null,
+							plotShadow: false,
+							type: 'pie'
+						},
+						title: {
+							text: 'Browser market shares January, 2015 to May, 2015'
+						},
+						tooltip: {
+							pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+						},
+						plotOptions: {
+							pie: {
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+									enabled: false
+								},
+								showInLegend: true
+							}
+						},
+						series: [{
+							name: 'Brands',
+							colorByPoint: true,
+							data: [{
+								name: 'Microsoft Internet Explorer',
+								y: 56.33
+							}, {
+								name: 'Chrome',
+								y: 24.03,
+								sliced: true,
+								selected: true
+							}, {
+								name: 'Firefox',
+								y: 10.38
+							}, {
+								name: 'Safari',
+								y: 4.77
+							}, {
+								name: 'Opera',
+								y: 0.91
+							}, {
+								name: 'Proprietary or Undetectable',
+								y: 0.2
+							}]
+						}]
+					});
+				});
+			});
+			$(function () {
+			Highcharts.chart('barchart', {
+					chart: {
+						type: 'column'
+					},
+					title: {
+						text: 'Comparativo Universidades'
+					},
+					subtitle: {
+						text: ''
+					},
+					xAxis: {
+						categories: [
+							'Calificaciones Iniciales',
+							'Calificaciones Finales',
+							'Actividades'
+						],
+						crosshair: true
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: 'Calificación'
+						}
+					},
+					tooltip: {
+						headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+						pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+							'<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+						footerFormat: '</table>',
+						shared: true,
+						useHTML: true
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						}
+					},
+					series: [
+					{
+						name: 'TEC',
+						data: [83.6, 80.1, 70.5]
+					},
+					{
+						name: 'UDEM',
+						data: [49.9, 60.7, 80.8]
+
+					}] 
+				});
+			});
+		</script>
+    </head>
+
+    <body>
+		<!-- Top menu -->
+		<nav class="navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html">
+						<img src="assets/img/aguilasGuadalupanas.png" alt="Aguilas Guadalupanas" style="margin-top: 20px">
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="top-navbar-1">
+					<ul class="nav navbar-nav navbar-right" id="menuContenedor">
+					
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <h1>Análisis</h1>
+
+		<div class="form-group">
+
+		<div class="radio">
+		  <label style="margin-right: 20px">
+		    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		    Datos Actuales
+		  </label>
+		  <label>
+		    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+		    Datos Históricos
+		  </label>
+		</div>	
+			<label>Analizar:</label>
+			<select class="selectpicker col-sm-2 col-xs-4" multiple>
+				<option>Calificación Inicial</option>
+				<option>Calificación Final</option>
+				<option>Actividades</option>
+				<option>Asistencias</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>Comparar:</label>
+			<select class="selectpicker col-sm-2 col-xs-4">
+				<option>Universidades</option>
+				<option>Escuelas</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+		<select class="selectpicker col-sm-2 col-xs-4">
+				<option>Agosto 2016</option>
+				<option>Enero 2016</option>
+				<option>Agosto 2015</option>
+			</select>
+			vs
+			<select class="selectpicker col-sm-2 col-xs-4">
+				<option>Agosto 2016</option>
+				<option>Enero 2016</option>
+				<option>Agosto 2015</option>
+			</select>
+		</div>
+		<button type="button" class="btn btn-default">
+			<i class="glyphicon glyphicon-stats"></i>
+			Analizar
+		</button>
+
+		<div id="barchart" style="margin: 0 auto"></div>
+    </body>
+
+	<script src="main.js"></script>
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/retina-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/flexslider/jquery.flexslider-min.js"></script>
+    <script src="assets/js/jflickrfeed.min.js"></script>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/js/jquery.ui.map.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+<html>
